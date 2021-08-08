@@ -1,0 +1,22 @@
+name = "FTensorKit"
+uuid = "507de762-ee87-45b1-8b0b-9110e5665d79"
+authors = ["Qi Yang <qiyang@mail.ustc.edu.cn> and contributors"]
+version = "0.1.0"
+
+[deps]
+Compose = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
+CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
+GeometryBasics = "5c1252a2-5f33-56bf-86c9-59e7332b4326"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+OMEinsum = "ebe7aa44-baf0-506c-a96f-8464559b3922"
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+Viznet = "52a3aca4-6234-47fd-b74a-806bdf78ede9"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
