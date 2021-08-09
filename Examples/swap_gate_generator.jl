@@ -29,7 +29,7 @@ end;
 
 # ╔═╡ 027510e1-7b89-410b-a8b7-79cb1fc7ffe3
 function PerspectiveMap3D(kx::Real,ky::Real)
-	pmap(p) = (p[1]+kx*p[3],p[2]+kx*p[3])
+	pmap(p) = (p[1]+kx*p[3],p[2]+ky*p[3])
 	return pmap
 end
 
