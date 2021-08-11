@@ -1,12 +1,13 @@
 export PerspectiveMap3D
 
-function PerspectiveMap3D(kx::Real,ky::Real)
-	pmap(p) = (p[1]+kx*p[3],p[2]+ky*p[3])
+function PerspectiveMap3D(kx::Real,ky::Real;rx=0.00001,ry=0.0001)
+	pmap(p) = (p[1]+kx*p[3]+rx*p[2],p[2]+ky*p[3]+ry*p[1])
 	return pmap
 end
 
-function PerspectiveMap3D(array::Array,kx::Real,ky::Real)
-    tmap = PerspectiveMap3D(kx,ky)
+# rx ry make every lines not horizontal or vertical
+function PerspectiveMap3D(array::Array,kx::Real,ky::Real;rx=0.00001,ry=0.0001) 
+    tmap = PerspectiveMap3D(kx,ky;rx=rx,ry=ry)
     N = size(array)[1]
     new_locations = zeros(Float64,N,2)
     for i =1:N
